@@ -8,9 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>标题</title>
   </head>
   <body>
-  $END$
+
+  <a href="hello">Invoke Generic Servlet(调用  Generic Servlet)</a>
   </body>
 </html>
