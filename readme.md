@@ -84,3 +84,11 @@ response.setHeader("Location", "fail.html");
   ```commons-io-1.4.jar```和```commons-fileupload-1.2.2.jar```
 [commons-io.jar](http://commons.apache.org/proper/commons-io/download_io.cgi)
 [commons-fileupload.jar](http://commons.apache.org/proper/commons-fileupload/download_fileupload.cgi)
+
+
+----
+
+## Servlet 增删改查  
+注意 ：依赖jar 包mysql-connector-java-5.0.8-bin.jar
+[mysql-connector-java.jar](https://dev.mysql.com/downloads/connector/j/5.1.html)
+教程：[CRUD](http://how2j.cn/k/servlet/servlet-query/563.html#nowhere)
