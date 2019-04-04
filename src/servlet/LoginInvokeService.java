@@ -2,6 +2,7 @@ package servlet;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -35,12 +36,13 @@ public class LoginInvokeService extends HttpServlet {
             System.out.println(param+":"+Arrays.asList(value));
         }
 
+        Cookie [] cookies=req.getCookies();
         System.out.println("------------------------设置响应内容  --------------------------");
         try {
             resp.setDateHeader("Expires", 0);
             resp.setHeader("Cache-Control", "no-cache");
             resp.setHeader("pragma", "no-cache");
-            resp.getWriter().println("<h1>Hello Servlet!</h1>");
+            resp.getWriter().println("<h1>Hello Servlet!</h1>"+cookies[0].getValue());
             resp.getWriter().println(new Date().toLocaleString());
 
             PrintWriter pw = resp.getWriter();
