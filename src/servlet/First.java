@@ -16,13 +16,17 @@ public class First  implements Servlet {
 
     public void init(ServletConfig config){
         this.config=config;
-        System.out.println("servlet is initialized");
+        System.out.println("First servlet is initialized");
     }
 
     public void service(ServletRequest req, ServletResponse res)
             throws IOException,ServletException {
 
         res.setContentType("text/html");
+
+
+
+
 
         PrintWriter out=res.getWriter();
         out.print("<html><body>");
