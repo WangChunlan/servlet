@@ -1,10 +1,10 @@
-##servlet demo
+## 一、servlet demo
 参考网站： <br/>
 1.[how2j.cn](http://how2j.cn/k/servlet/servlet-eclipse/558.html)	<br/>
 2.[javaTpoint](https://www.javatpoint.com/GenericServlet-class)
 
 ----
-###1.运行程序
+### 1.运行程序
 整个启动过程，及停止tomcat控制台打印：<br/>
 ``` Connected to server  ``` [由tomcat而来]<br/>
 ``` servlet is initialized ``` [程序本身]<br/>
@@ -30,7 +30,7 @@ tomcat一启动，就需要执行一些初始化的代码，比如校验数据�
 但是Servlet的生命周期是在用户访问浏览器对应的路径开始的。如果没有用户的第一次访问，就无法执行相关代码。 
 这个时候，就需要Servlet实现自启动 即，伴随着tomcat的启动，自动启动初始化，在初始化方法init()中，就可以进行一些业务代码的工作了。
 
-##### `` load-on-startup ``
+#####  `` load-on-startup ``
 在web.xml中，配置 Servlet的地方，增加一句
  ```<load-on-startup>10</load-on-startup>`````
 取值范围是1-99;即表明该Servlet会随着Tomcat的启动而初始化。
@@ -43,7 +43,7 @@ tomcat一启动，就需要执行一些初始化的代码，比如校验数据�
 ### 5. servlet request 常见的方法
 [servlet request 常见的方法](http://how2j.cn/k/servlet/servlet-request/555.html)
 
-#####获取请求头信息：  req.getHeaderNames()
+##### 获取请求头信息：  req.getHeaderNames()
 访问HelloServlet获取如下头信息:
 host: 主机地址
 user-agent: 浏览器基本资料
@@ -77,18 +77,34 @@ response.sendRedirect("fail.html");
 response.setStatus(301);
 response.setHeader("Location", "fail.html");
 
-### 6. servlet 上传文件
+### 7. servlet 上传文件
 [servlet 上传文件](http://how2j.cn/k/servlet/servlet-upload/587.html#nowhere)
 
 上传功能需要两个第三方的包：
   ```commons-io-1.4.jar```和```commons-fileupload-1.2.2.jar```
-[commons-io.jar](http://commons.apache.org/proper/commons-io/download_io.cgi)
+[commons-io.jar](http://commons.apache.org/proper/commons-io/download_io.cgi)<br/>
 [commons-fileupload.jar](http://commons.apache.org/proper/commons-fileupload/download_fileupload.cgi)
 
 
 ----
 
-## Servlet 增删改查  
+## 二、Servlet 增删改查  
 注意 ：依赖jar 包mysql-connector-java-5.0.8-bin.jar
-[mysql-connector-java.jar](https://dev.mysql.com/downloads/connector/j/5.1.html)
+[mysql-connector-java.jar](https://dev.mysql.com/downloads/connector/j/5.1.html)<br/>
 教程：[CRUD](http://how2j.cn/k/servlet/servlet-query/563.html#nowhere)
+
+###### servlet 开发弊端
+对使用Servlet进行CRUD开发就有比较全面感性认识了。
+ 其中一个比较明显的弊端就是在Servlet编写html代码很痛苦，效率不高，可读性差，难以维护。
+最好可以在html文件里面写html代码，同时又能在里面调用java的变量，那么这样就需要学习JSP了。
+[servlet 开发弊端](http://how2j.cn/k/servlet/servlet-disadvantage/777.html#nowhere)
+
+
+## 三、JSON 
+> 要运行起来需要jquery.min.js，各种jar包
+json-lib-2.1-jdk15.jar
+ezmorph-1.0.3.jar
+commons-logging.jar
+commons-lang-2.5.jar
+commons-collections-3.1.jar
+commons-beanutils-1.7.0.jar

@@ -6,16 +6,12 @@ package dao;
  * @Description
  * @createTime 2019年04月04日 13:19:00
  */
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
 
 import entity.Hero;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HeroDAO {
 
@@ -53,23 +49,18 @@ public class HeroDAO {
     }
 
     public void add(Hero hero) {
-
-        String sql = "insert into hero values(null,?,?,?)";
+        String sql = "insert into hero (name,hp,damage) values(?,?,?)";
         try (Connection c = getConnection(); PreparedStatement ps = c.prepareStatement(sql);) {
-
             ps.setString(1, hero.name);
             ps.setFloat(2, hero.hp);
             ps.setInt(3, hero.damage);
-
             ps.execute();
-
-            ResultSet rs = ps.getGeneratedKeys();
+         /*   ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
                 int id = rs.getInt(1);
                 hero.id = id;
-            }
+            }*/
         } catch (SQLException e) {
-
             e.printStackTrace();
         }
     }
@@ -83,7 +74,6 @@ public class HeroDAO {
             ps.setFloat(2, hero.hp);
             ps.setInt(3, hero.damage);
             ps.setInt(4, hero.id);
-
             ps.execute();
 
         } catch (SQLException e) {
