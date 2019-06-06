@@ -12,6 +12,6 @@
 </head>
 <body>
 成功了
-<% session.setAttribute("userName","admin");%>
+<%--<% session.setAttribute("userName","admin");%>--%>
 </body>
 </html>

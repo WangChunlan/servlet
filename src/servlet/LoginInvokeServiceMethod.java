@@ -51,6 +51,8 @@ public class LoginInvokeServiceMethod extends HttpServlet {
         if("admin".equals(name)&&password.equals(password)){
 
 //            html="<div style='color:green'>success </div>";
+            // 将登陆名保存到session 中
+            req.getSession().setAttribute("userName",name);
             req.getRequestDispatcher("success.jsp").forward(req,resp);
         }else{
             html="<div style='color:red'>fail </div>";

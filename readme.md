@@ -108,3 +108,23 @@ commons-logging.jar
 commons-lang-2.5.jar
 commons-collections-3.1.jar
 commons-beanutils-1.7.0.jar
+
+
+
+<br/>
+
+----
+
+## 四、listener
+Listener 的作用是用于监听 web应用的创建和销毁，以及在其上attribute发生的变化。 
+web应用即ServletContext对象(jsp的隐式对象application) 
+除了对web应用的监听外，还能监听session和request的生命周期，以及他们的attribute发生的变化。<br/>
+
+**总结: 监听 web应用程序（ServletContext对象，即jsp隐式对象 application） 
+session 、request 生命周期，以及他们的attribute发生的变化**
+<br/>
+
+> **使用时注意事项：**<br/>
+1.在web.xml中配置监听器。注意：监听器>过滤器>serlvet，配置的时候要注意先后顺序<br/>
+2.在Servlet3.0中，监听器的配置可以直接在代码中通过注解（@WebListener   //在类名上方，注明此类是监听器）来完成，无需在web.xml中再配置。<br/>
+

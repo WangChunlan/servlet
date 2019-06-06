@@ -27,7 +27,16 @@ public class EncodingFilter implements Filter {
     }
 
     @Override
-    public void init(FilterConfig arg0) throws ServletException {
+    public void init(FilterConfig filterConfig) throws ServletException {
+        //获得web.xml 中filter的名称
+        String name = filterConfig.getFilterName();
+        System.out.println("EncodingFilter: 过滤器 "+name);
+        //当前filter初始化参数
+        String parm = filterConfig.getInitParameter("aaa");
+        System.out.println(parm);
+        //获得servletContext
+        filterConfig.getServletContext();
+        System.out.println(filterConfig.getServletContext());
     }
 
 }

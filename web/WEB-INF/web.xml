@@ -20,9 +20,10 @@
     <listener>
         <listener-class>listener.RequestListener</listener-class>
     </listener>
-    <listener>
+    <!-- 在web3.0中可以使用注解，不需要在 web.xml中单独配置了 -->
+   <!-- <listener>
         <listener-class>listener.demo.OnlineNumberListener</listener-class>
-    </listener>
+    </listener>-->
 
     <filter>
         <filter-name>EncodingFilter</filter-name>

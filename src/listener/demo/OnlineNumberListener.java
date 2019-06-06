@@ -1,5 +1,6 @@
 package listener.demo;
 import javax.servlet.ServletContext;
+import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 /**
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpSessionListener;
  * @Description
  * @createTime 2019年06月06日 14:56:00
  */
+@WebListener   //在此注明以下类是监听器
 public class OnlineNumberListener implements HttpSessionListener {
 
     @Override
