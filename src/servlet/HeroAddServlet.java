@@ -19,8 +19,8 @@ import dao.HeroDAO;
 public class HeroAddServlet extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        request.setCharacterEncoding("UTF-8");
+        // 注释掉下面一行 使用过滤器 代替该功能
+//        request.setCharacterEncoding("UTF-8");
 
         Hero hero = new Hero();
         hero.setName(request.getParameter("name"));

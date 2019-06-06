@@ -1,10 +1,9 @@
 package servlet;
 
 import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -50,12 +49,15 @@ public class LoginInvokeServiceMethod extends HttpServlet {
 
         String html=null;
         if("admin".equals(name)&&password.equals(password)){
-            html="<div style='color:green'>success </div>";
+
+//            html="<div style='color:green'>success </div>";
+            req.getRequestDispatcher("success.jsp").forward(req,resp);
         }else{
             html="<div style='color:red'>fail </div>";
+            req.getRequestDispatcher("fail.jsp").forward(req,resp);
         }
-        PrintWriter out=resp.getWriter();
-        out.write(html);
+//        PrintWriter out=resp.getWriter();
+//        out.write(html);
 
     }
 

@@ -18,5 +18,9 @@
   <a href="loginInvokeService.jsp">登录界面(调用  post,返回响应，控制台输出)[servlet 调用流程]</a><br/>
   <a href="loginInvokeServiceMethod.jsp">登录界面(调用  post,返回响应，控制台输出)[servlet service()]</a><br/>
 
+  <hr/>
+  <h2>Listener</h2>
+  <h5><a href="http://how2j.cn/k/listener/listener-tutorials/604.html"> 学习网址</a></h5>
+  <a href="../listener/testContext.jsp">Listener 监听 Context </a>
   </body>
 </html>
