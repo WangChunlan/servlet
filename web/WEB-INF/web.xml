@@ -34,7 +34,9 @@
         <filter-name>EncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-    <filter>
+
+    <!-- 在web3.0中可以使用注解  注释 WebFilter -->
+  <!--  <filter>
         <filter-name>AuthFilter</filter-name>
         <filter-class>filter.AuthFilter</filter-class>
     </filter>
@@ -42,7 +44,7 @@
     <filter-mapping>
         <filter-name>AuthFilter</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    </filter-mapping>-->
 
 
     <filter>
@@ -211,6 +213,16 @@
         <servlet-name>GetManyServlet</servlet-name>
         <url-pattern>/getManyServlet</url-pattern>
     </servlet-mapping>
+
+   <!-- <servlet>
+        <servlet-name>ProductListServlet</servlet-name>
+        <servlet-class>shopping.servlet.ProductListServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProductListServlet</servlet-name>
+        <url-pattern>/jsp/servlet/shopping/listProduct</url-pattern>
+    </servlet-mapping>-->
 
 
 </web-app>

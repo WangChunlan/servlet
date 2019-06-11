@@ -1,6 +1,7 @@
 package filter;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -11,6 +12,7 @@ import java.io.IOException;
  * @Description
  * @createTime 2019年06月06日 15:58:00
  */
+@WebFilter
 public class AuthFilter implements Filter {
     @Override
     public void destroy() {

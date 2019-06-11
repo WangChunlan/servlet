@@ -93,22 +93,26 @@
 
     <table width="90%" class="table">
         <caption>
-            <h2>
-                filter 过滤器</h2>
+            <h2> filter 过滤器</h2>
         </caption>
         <thead>
         <tr>
             <th>filter</th>
-            <th> Listener监听对象</th>
             <th> 参考资料</th>
-            <th> 单耗</th>
+            <th> 配置</th>
         </tr>
         </thead>
         <tr>
-            <td colspan="4">
+            <td colspan="2">
                 中文处理<br/>
                 登录验证<br/>
                 <a href="http://how2j.cn/k/filter/filter-tutorial/588.html">过滤器 FILTER 教程 </a>
+            </td>
+            <td>
+                两种配置方式<br/>
+                方式一、在web.xml中进行配置<br/>
+                方式二、使用注解<br/>
+
             </td>
         </tr>
 
